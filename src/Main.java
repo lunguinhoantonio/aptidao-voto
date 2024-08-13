@@ -29,9 +29,11 @@ public class Main {
             --idadeAtual;
         }
 
+        boolean isOpcional = (idadeAtual >= 16 && idadeAtual < 18) || (idadeAtual >= 70);
+
         if (idadeAtual <= 15){
             situacaoVoto = "Você não vota!";
-        } else if ((idadeAtual >= 16 && idadeAtual < 18) || (idadeAtual >= 70)) {
+        } else if (isOpcional) {
             situacaoVoto = "Seu voto é opcional!";
         } else {
             situacaoVoto = "Seu voto é obrigatório!";
@@ -41,15 +43,5 @@ public class Main {
         System.out.println(anoEleitoral);
         System.out.println("Você tem " + idadeAtual + " anos de idade, portanto");
         System.out.println(situacaoVoto);
-
-//        System.out.println("Você tem " + idadeAtual + " anos de idade!");
-//        if (idadeAtual <= 15) {
-//            System.out.println("Seu voto é proibido!");
-//        } else {
-//            situacaoVoto = ((idadeAtual >= 16 && idadeAtual < 18) || (idadeAtual > 70)) ?
-//                    "Seu voto é opcional!" : "Seu voto é obrigatório!";
-//            System.out.println(situacaoVoto);
-//        }
-
     }
 }
